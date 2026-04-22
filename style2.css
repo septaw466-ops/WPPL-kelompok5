@@ -68,7 +68,11 @@ body {
 .bg-icon-yellow { background-color: #fff8e1; color: #ffc107; }
 .bg-icon-red { background-color: #ffebee; color: #dc3545; }
 
-.progress-bar { background-color: #002855; }
+.progress .progress-bar {
+    /* height: 20px;  */
+    border-radius: 50px;
+}
+.progress-bar { background-color: #002855;}
 
 /* --- Aktivitas & Notifikasi --- */
 .aktivitas-item { padding: 15px 0; border-bottom: 1px solid #eee; }

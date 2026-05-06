@@ -19,6 +19,7 @@ body {
     position: fixed; 
     display: flex; 
     flex-direction: column;
+    z-index: 999; /* ← tambahkan ini */
 }
 
 .nav-link { color: #ffffff !important; padding: 15px 20px; transition: 0.3s; }

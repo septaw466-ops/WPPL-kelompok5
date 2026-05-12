@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- CSS Kamu -->
+    <link rel="stylesheet" href="WPPL-Kelompok/style2.css">
+</head>
+<body>
+
+<div class="wrapper">
+
+    <!-- Sidebar -->
+    <div class="sidebar p-3">
+
+        <h4 class="fw-bold text-warning mb-4">E-Logbook</h4>
+
+        <small class="text-light mb-4">Admin Dashboard</small>
+
+        <ul class="nav flex-column mt-4">
+
+            <li class="nav-item mb-2">
+                <a href="#" class="nav-link active">
+                    <i class="bi bi-grid-fill me-2"></i>Dashboard
+                </a>
+            </li>
+        </ul>
+
+        <div class="mt-auto">
+            <button class="btn btn-danger w-100">
+                <i class="bi bi-box-arrow-right"></i>Logout
+            </button>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+                <h3 class="fw-bold">Admin Dashboard</h3>
+                <small class="text-muted">Kelola sistem dan monitoring keseluruhan</small>
+            </div>
+
+            <div class="d-flex align-items-center gap-3">
+                <button class="btn btn-warning rounded-pill px-4">Administrator</button>
+
+                <div class="profile-admin">
+                    A
+                </div>
+            </div>
+        </div>
+
+        <!-- Statistik -->
+        <div class="row g-4 mb-4">
+            <div class="col-md-3">
+                <div class="card stat-card border-start border-primary" style="animation-delay:0.1s">
+
+                    <div>
+                        <small>Total Students</small>
+                        <h3 class="fw-bold">245</h3>
+                    </div>
+
+                    <div class="icon-box bg-icon-blue">
+                        <i class="bi bi-people-fill"></i>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card stat-card border-start border-success"
+                    style="animation-delay:0.2s">
+
+                    <div>
+                        <small>Total Supervisor</small>
+                        <h3 class="fw-bold">18</h3>
+                    </div>
+
+                    <div class="icon-box bg-icon-green">
+                        <i class="bi bi-person-check-fill"></i>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card stat-card border-start border-warning"
+                    style="animation-delay:0.3s">
+
+                    <div>
+                        <small>Companies</small>
+                        <h3 class="fw-bold">42</h3>
+                    </div>
+
+                    <div class="icon-box bg-icon-yellow">
+                        <i class="bi bi-building-fill"></i>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card stat-card border-start border-danger"
+                    style="animation-delay:0.4s">
+
+                    <div>
+                        <small>Total Logs</small>
+                        <h3 class="fw-bold">18.452</h3>
+                    </div>
+
+                    <div class="icon-box bg-icon-red">
+                        <i class="bi bi-journal-text"></i>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Quick Action -->
+        <div class="card p-4 mb-4"
+            style="animation-delay:0.5s">
+
+            <div class="d-flex justify-content-between align-items-center mb-4">
+
+                <h5 class="fw-bold">
+                    <i class="bi bi-lightning-charge-fill text-warning"></i>
+                    Quick Management Actions
+                </h5>
+
+            </div>
+
+            <div class="row g-3">
+
+                <div class="col-md-3">
+                    <div class="bg-white p-4 rounded border text-center">
+                        <i class="bi bi-person-plus fs-3"></i>
+                        <p class="mt-2 mb-0">Add New User</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="bg-white p-4 rounded border text-center">
+                        <i class="bi bi-buildings fs-3"></i>
+                        <p class="mt-2 mb-0">Manage Companies</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="bg-white p-4 rounded border text-center">
+                        <i class="bi bi-bar-chart-line fs-3"></i>
+                        <p class="mt-2 mb-0">View Reports</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="bg-white p-4 rounded border text-center">
+                        <i class="bi bi-bell fs-3"></i>
+                        <p class="mt-2 mb-0">Notifications</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Table -->
+        <div class="card p-4"
+            style="animation-delay:0.6s">
+
+            <div class="d-flex justify-content-between align-items-center mb-4">
+
+                <h5 class="fw-bold">
+                    User Mapping
+                </h5>
+
+                <button class="btn btn-primary rounded-pill">
+                    Add New Mapping
+                </button>
+
+            </div>
+
+            <div class="table-responsive">
+
+                <table class="table align-middle">
+
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Mahasiswa</th>
+                            <th>NIM</th>
+                            <th>Perusahaan</th>
+                            <th>Status</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>1</td>
+                            <td>Ahmad Irsyad</td>
+                            <td>E41212999</td>
+                            <td>PT Telkom</td>
+                            <td>
+                                <span class="badge bg-success">
+                                    Active
+                                </span>
+                            </td>
+                            <td>
+                                <i class="bi bi-pencil-square text-primary me-2"></i>
+                                <i class="bi bi-trash text-danger"></i>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td>Siti Aisyah</td>
+                            <td>E41212777</td>
+                            <td>PT Pertamina</td>
+                            <td>
+                                <span class="badge bg-success">
+                                    Active
+                                </span>
+                            </td>
+                            <td>
+                                <i class="bi bi-pencil-square text-primary me-2"></i>
+                                <i class="bi bi-trash text-danger"></i>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kelola PL / Instansi</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../style2.css">
+</head>
+<body>
+
+<div class="wrapper">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar p-3">
+
+        <div class="text-center mb-4">
+            <h4 class="fw-bold">E-Logbook</h4>
+            <small>Admin Dashboard</small>
+        </div>
+
+        <div class="nav flex-column">
+
+            <a href="dashboardadmin2.html" class="nav-link">
+                <i class="bi bi-grid me-2"></i>
+                Dashboard
+            </a>
+
+            <a href="monitormahasiswa2.html" class="nav-link">
+                <i class="bi bi-people me-2"></i>
+                Mahasiswa
+            </a>
+
+            <a href="monitordosen2.html" class="nav-link">
+                <i class="bi bi-person-badge me-2"></i>
+                Dosen
+            </a>
+
+            <a href="monitorpl.html" class="nav-link active">
+                <i class="bi bi-building me-2"></i>
+                PL / Instansi
+            </a>
+
+            <a href="plotting.html" class="nav-link">
+                <i class="bi bi-diagram-3 me-2"></i>
+                Plotting
+            </a>
+
+            <a href="monitorsaja.html" class="nav-link">
+                <i class="bi bi-clipboard-data me-2"></i>
+                Monitoring
+            </a>
+
+        </div>
+
+        <div class="mt-auto pt-4">
+            <a href="../Login/login.php" class="btn btn-danger w-100">
+                <i class="bi bi-box-arrow-left me-2"></i>
+                Logout
+            </a>
+        </div>
+
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+
+        <!-- HEADER -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+
+            <div>
+                <h3 class="fw-bold">Kelola PL / Instansi</h3>
+                <small class="text-muted">
+                    Manajemen data pembimbing lapang dan instansi magang
+                </small>
+            </div>
+
+            <button class="btn btn-warning"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalInstansi">
+                     <i class="bi bi-plus-circle me-2"></i>
+                        Tambah Instansi
+            </button>
+
+        </div>
+
+        <!-- CARD -->
+        <div class="card p-4">
+
+            <!-- SEARCH -->
+            <div class="row mb-4">
+
+                <div class="col-md-4">
+                    <input type="text" class="form-control" placeholder="Cari instansi...">
+                </div>
+
+                <!-- <div class="col-md-3">
+                    <select class="form-select">
+                        <option>Filter Kategori</option>
+                        <option>Perusahaan</option>
+                        <option>Pemerintahan</option>
+                        <option>Startup</option>
+                    </select>
+                </div> -->
+
+            </div>
+
+            <!-- TABLE -->
+            <div class="table-responsive">
+
+                <table class="table table-hover align-middle">
+
+                    <thead class="table-dark">
+
+                        <tr class="text-nowrap">
+                            <th>No</th>
+                            <th>No Telpon</th>
+                            <th>Nama Instansi</th>
+                            <th>Pembimbing Lapang</th>
+                            <th>Email</th>
+                            <th>Alamat</th>
+                            <th>Jumlah Mahasiswa</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>1</td>
+                            <td>012345678901</td>
+                            <td>PT Telkom Indonesia</td>
+                            <td>Bapak Andi</td>
+                            <td>andi@telkom.co.id</td>
+                            <td>JL.Cendrawasih No.19</td>
+
+                            <td>
+                                <span class="badge bg-primary">
+                                    12 Mahasiswa
+                                </span>
+                            </td>
+
+                            <td>
+                                <span class="badge bg-success">
+                                    Aktif
+                                </span>
+                            </td>
+
+                            <td class="text-nowrap">
+                                <button class="btn btn-sm btn-primary">Edit</button>
+                                <button class="btn btn-sm btn-danger">Hapus</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td></td>
+                            <td>Bank BRI</td>
+                            <td>Ibu Sinta</td>
+                            <td>sinta@bri.co.id</td>
+                            <td>JL. Gadjah Mada No.18</td>
+                            
+                            <td>
+                                <span class="badge bg-primary">
+                                    8 Mahasiswa
+                                </span>
+                            </td>
+
+                            <td>
+                                <span class="badge bg-success">
+                                    Aktif
+                                </span>
+                            </td>
+
+                            <td class="text-nowrap">
+                                <button class="btn btn-sm btn-primary">Edit</button>
+                                <button class="btn btn-sm btn-danger">Hapus</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>3</td>
+                            <td></td>
+                            <td>Pertamina</td>
+                            <td>Bapak Rizal</td>
+                            <td>rizal@pertamina.co.id</td>
+                            <td></td>
+
+                            <td>
+                                <span class="badge bg-primary">
+                                    15 Mahasiswa
+                                </span>
+                            </td>
+
+                            <td>
+                                <span class="badge bg-success">
+                                    Aktif
+                                </span>
+                            </td>
+
+                            <td class="text-nowrap">
+                                <button class="btn btn-sm btn-primary">Edit</button>
+                                <button class="btn btn-sm btn-danger">Hapus</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>4</td>
+                            <td></td>
+                            <td>Diskominfo Jember</td>
+                            <td>Ibu Maya</td>
+                            <td>maya@jember.go.id</td>
+                            <td></td>
+
+                            <td>
+                                <span class="badge bg-primary">
+                                    6 Mahasiswa
+                                </span>
+                            </td>
+
+                            <td>
+                                <span class="badge bg-success">
+                                    Aktif
+                                </span>
+                            </td>
+
+                            <td class="text-nowrap">
+                                <button class="btn btn-sm btn-primary">Edit</button>
+                                <button class="btn btn-sm btn-danger">Hapus</button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+        <!-- STATISTIK -->
+        <!-- <div class="row mt-4 g-4">
+
+            <div class="col-md-4">
+
+                <div class="card stat-card border-start border-primary border-5">
+
+                    <div>
+                        <small class="text-muted">
+                            Total Instansi
+                        </small>
+
+                        <h3 class="fw-bold mt-2">
+                            42
+                        </h3>
+                    </div>
+
+                    <div class="icon-box bg-icon-blue">
+                        <i class="bi bi-building-fill"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="card stat-card border-start border-success border-5">
+
+                    <div>
+                        <small class="text-muted">
+                            Instansi Aktif
+                        </small>
+
+                        <h3 class="fw-bold mt-2">
+                            39
+                        </h3>
+                    </div>
+
+                    <div class="icon-box bg-icon-green">
+                        <i class="bi bi-check-circle-fill"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="card stat-card border-start border-warning border-5">
+
+                    <div>
+                        <small class="text-muted">
+                            Total Mahasiswa PKL
+                        </small>
+
+                        <h3 class="fw-bold mt-2">
+                            245
+                        </h3>
+                    </div>
+
+                    <div class="icon-box bg-icon-yellow">
+                        <i class="bi bi-people-fill"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div> -->
+
+</div>
+<!-- MODAL TAMBAH INSTANSI -->
+<div class="modal fade"
+     id="modalInstansi"
+     tabindex="-1">
+
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content border-0 rounded-4">
+
+            <!-- HEADER -->
+            <div class="modal-header border-0 pb-0 px-4 pt-4">
+
+                <h4 class="fw-bold">
+                    Tambah Instansi
+                </h4>
+
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+                </button>
+
+            </div>
+
+            <!-- BODY -->
+            <div class="modal-body px-4 pt-3">
+
+                <!-- NAMA INSTANSI -->
+                <div class="mb-4">
+
+                    <label class="form-label fw-semibold">
+                        Nama Instansi
+                    </label>
+
+                    <input type="text"
+                           class="form-control"
+                           placeholder="Masukkan nama instansi">
+
+                </div>
+
+                <!-- PEMBIMBING LAPANG -->
+                <div class="mb-4">
+
+                    <label class="form-label fw-semibold">
+                        Nama Pembimbing Lapang
+                    </label>
+
+                    <input type="text"
+                           class="form-control"
+                           placeholder="Masukkan nama pembimbing">
+
+                </div>
+
+                <!-- EMAIL -->
+                <div class="mb-4">
+
+                    <label class="form-label fw-semibold">
+                        Email
+                    </label>
+
+                    <input type="email"
+                           class="form-control"
+                           placeholder="Masukkan email">
+
+                </div>
+
+                <!-- NO HP -->
+                <div class="mb-4">
+
+                    <label class="form-label fw-semibold">
+                        Nomor Telepon
+                    </label>
+
+                    <input type="text"
+                           class="form-control"
+                           placeholder="Masukkan nomor telepon">
+
+                </div>
+
+                <!-- ALAMAT -->
+                <div class="mb-4">
+
+                    <label class="form-label fw-semibold">
+                        Alamat
+                    </label>
+
+                    <textarea class="form-control"
+                              rows="3"
+                              placeholder="Masukkan alamat instansi"></textarea>
+
+                </div>
+
+            </div>
+
+            <!-- FOOTER -->
+            <div class="modal-footer border-0 px-4 pb-4">
+
+                <button class="btn btn-light"
+                        data-bs-dismiss="modal">
+
+                    Batal
+
+                </button>
+
+                <button class="btn btn-warning">
+
+                    Simpan
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

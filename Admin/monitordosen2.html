@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kelola Dosen</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../style2.css">
+</head>
+<body>
+
+<div class="wrapper">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar p-3">
+
+        <div class="text-center mb-4">
+            <h4 class="fw-bold">E-Logbook</h4>
+            <small>Admin Dashboard</small>
+        </div>
+
+        <div class="nav flex-column">
+
+            <a href="dashboardadmin2.html" class="nav-link">
+                <i class="bi bi-grid me-2"></i>
+                Dashboard
+            </a>
+
+            <a href="monitormahasiswa2.html" class="nav-link">
+                <i class="bi bi-people me-2"></i>
+                Mahasiswa
+            </a>
+
+            <a href="monitordosen2.html" class="nav-link active">
+                <i class="bi bi-person-badge me-2"></i>
+                Dosen
+            </a>
+
+            <a href="monitorpl.html" class="nav-link">
+                <i class="bi bi-building me-2"></i>
+                PL / Instansi
+            </a>
+
+            <a href="plotting.html" class="nav-link">
+                <i class="bi bi-diagram-3 me-2"></i>
+                Plotting
+            </a>
+
+            <a href="monitorsaja.html" class="nav-link">
+                <i class="bi bi-clipboard-data me-2"></i>
+                Monitoring
+            </a>
+
+        </div>
+
+        <div class="mt-auto pt-4">
+            <a href="../Login/login.php" class="btn btn-danger w-100">
+                <i class="bi bi-box-arrow-left me-2"></i>
+                Logout
+            </a>
+        </div>
+
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+
+        <!-- HEADER -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+
+            <div>
+                <h3 class="fw-bold">Kelola Dosen</h3>
+                <small class="text-muted">
+                    Manajemen data dosen pembimbing
+                </small>
+            </div>
+
+            <button class="btn btn-warning"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalDosen">
+                <i class="bi bi-plus-circle me-2"></i>
+                    Tambah Dosen
+            </button>
+
+        </div>
+
+        <!-- CARD -->
+        <div class="card p-4">
+
+            <!-- SEARCH -->
+            <div class="row mb-4">
+
+                <div class="col-md-4">
+                    <input type="text" class="form-control" placeholder="Cari dosen...">
+                </div>
+
+                <!-- <div class="col-md-3">
+                    <select class="form-select">
+                        <option>Filter Jurusan</option>
+                        <option>Teknik Informatika</option>
+                        <option>Sistem Informasi</option>
+                    </select>
+                </div> -->
+
+            </div>
+
+            <!-- TABLE -->
+            <div class="table-responsive">
+
+                <table class="table table-hover align-middle">
+
+                    <thead class="table-dark">
+
+                        <tr>
+                            <th>No</th>
+                            <th>NIP</th>
+                            <th>Nama Dosen</th>
+                            <th>Email</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>1</td>
+                            <td>1987654321</td>
+                            <td>Dr. Budi</td>
+                            <td>budi@mail.com</td>
+                            </td>
+
+                            <td>
+                                <span class="badge bg-success">
+                                    Aktif
+                                </span>
+                            </td>
+
+                            <td>
+
+                                <button class="btn btn-sm btn-primary">
+                                    Edit
+                                </button>
+
+                                <!-- <button class="btn btn-sm btn-warning">
+                                    Reset
+                                </button> -->
+
+                                <button class="btn btn-sm btn-danger">
+                                    Hapus
+                                </button>
+
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td>1987654322</td>
+                            <td>Dr. Wawan Setiawan</td>
+                            <td>wawans@mail.com</td>
+                            </td>
+
+                            <td>
+                                <span class="badge bg-success">
+                                    Aktif
+                                </span>
+                            </td>
+
+                            <td>
+
+                                <button class="btn btn-sm btn-primary">
+                                    Edit
+                                </button>
+
+                                <!-- <button class="btn btn-sm btn-warning">
+                                    Reset
+                                </button> -->
+
+                                <button class="btn btn-sm btn-danger">
+                                    Hapus
+                                </button>
+
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>3</td>
+                            <td>1987654323</td>
+                            <td>Dr. Bambang</td>
+                            <td>bambang@mail.com</td>
+                            </td>
+
+                            <td>
+                                <span class="badge bg-success">
+                                    Aktif
+                                </span>
+                            </td>
+
+                            <td>
+
+                                <button class="btn btn-sm btn-primary">
+                                    Edit
+                                </button>
+
+                                <!-- <button class="btn btn-sm btn-warning">
+                                    Reset
+                                </button> -->
+
+                                <button class="btn btn-sm btn-danger">
+                                    Hapus
+                                </button>
+
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>4</td>
+                            <td>1987654324</td>
+                            <td>Dr. Sinta Maharani</td>
+                            <td>sintarani@mail.com</td>
+                            </td>
+
+                            <td>
+                                <span class="badge bg-success">
+                                    Aktif
+                                </span>
+                            </td>
+
+                            <td>
+
+                                <button class="btn btn-sm btn-primary">
+                                    Edit
+                                </button>
+
+                                <!-- <button class="btn btn-sm btn-warning">
+                                    Reset
+                                </button> -->
+
+                                <button class="btn btn-sm btn-danger">
+                                    Hapus
+                                </button>
+
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+        <!-- STATISTIK DOSEN -->
+        <div class="row mt-4 g-4">
+
+            <div class="col-md-4">
+
+                <div class="card stat-card border-start border-primary border-5">
+
+                    <div>
+                        <small class="text-muted">
+                            Total Dosen
+                        </small>
+
+                        <h3 class="fw-bold mt-2">
+                            18
+                        </h3>
+                    </div>
+
+                    <div class="icon-box bg-icon-blue">
+                        <i class="bi bi-person-badge-fill"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="card stat-card border-start border-success border-5">
+
+                    <div>
+                        <small class="text-muted">
+                            Dosen Aktif
+                        </small>
+
+                        <h3 class="fw-bold mt-2">
+                            16
+                        </h3>
+                    </div>
+
+                    <div class="icon-box bg-icon-green">
+                        <i class="bi bi-check-circle-fill"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="card stat-card border-start border-warning border-5">
+
+                    <div>
+                        <small class="text-muted">
+                            Total Bimbingan
+                        </small>
+
+                        <h3 class="fw-bold mt-2">
+                            245
+                        </h3>
+                    </div>
+
+                    <div class="icon-box bg-icon-yellow">
+                        <i class="bi bi-diagram-3-fill"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- MODAL TAMBAH DOSEN -->
+<div class="modal fade"
+     id="modalDosen"
+     tabindex="-1">
+
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content border-0 rounded-4">
+
+            <!-- HEADER -->
+            <div class="modal-header border-0 pb-0 px-4 pt-4">
+
+                <h4 class="fw-bold">
+                    Tambah Dosen
+                </h4>
+
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+                </button>
+
+            </div>
+
+            <!-- BODY -->
+            <div class="modal-body px-4 pt-3">
+
+                <!-- NIP -->
+                <div class="mb-4">
+
+                    <label class="form-label fw-semibold">
+                        NIP
+                    </label>
+
+                    <input type="text"
+                           class="form-control"
+                           placeholder="Masukkan NIP">
+
+                </div>
+
+                <!-- NAMA -->
+                <div class="mb-4">
+
+                    <label class="form-label fw-semibold">
+                        Nama Dosen
+                    </label>
+
+                    <input type="text"
+                           class="form-control"
+                           placeholder="Masukkan nama dosen">
+
+                </div>
+
+                <!-- EMAIL -->
+                <div class="mb-4">
+
+                    <label class="form-label fw-semibold">
+                        Email
+                    </label>
+
+                    <input type="text"
+                           class="form-control"
+                           placeholder="Masukkan email">
+
+                </div>
+
+            </div>
+
+            <!-- FOOTER -->
+            <div class="modal-footer border-0 px-4 pb-4">
+
+                <button class="btn btn-light"
+                        data-bs-dismiss="modal">
+
+                    Batal
+
+                </button>
+
+                <button class="btn btn-warning">
+
+                    Simpan
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

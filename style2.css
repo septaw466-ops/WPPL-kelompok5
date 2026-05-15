@@ -19,6 +19,7 @@ body {
     position: fixed; 
     display: flex; 
     flex-direction: column;
+    z-index: 999; /* ← tambahkan ini */
 }
 
 .nav-link { color: #ffffff !important; padding: 15px 20px; transition: 0.3s; }
@@ -107,3 +108,160 @@ body {
 
 /* Border Dashed untuk Input File */
 .border-dashed { border: 2px dashed #ccc !important; }
+
+/* --- Tambahan CSS Baru --- */
+
+/* Memperbaiki stat-card agar border sebelah kiri lebih tegas */
+.stat-card {
+    border-left-width: 5px !important;
+    background-color: white;
+}
+
+/* Styling untuk angka di dalam kotak mahasiswa */
+.text-center small {
+    font-size: 0.75rem;
+    color: #6c757d;
+}
+
+/* Tombol aksi cepat (Quick Actions) */
+.bg-white.p-2.rounded {
+    cursor: pointer;
+    transition: 0.2s;
+    font-weight: 500;
+}
+.bg-white.p-2.rounded:hover {
+    background-color: #002855 !important;
+    color: white;
+}
+
+/* Table styling agar bersih */
+.table thead th {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Responsivitas: Sidebar sembunyi di layar kecil (Opsional) */
+@media (max-width: 768px) {
+    .sidebar { width: 70px; }
+    .sidebar span, .sidebar small, .sidebar h4 { display: none; }
+    .content { margin-left: 70px; }
+}
+
+/* --- Tambahkan ini di bagian paling bawah style2.css --- */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px); /* Muncul dari bawah ke atas sejauh 30px */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Kita targetkan elemen yang punya inline style 'animation-delay' 
+   agar mereka tersembunyi dulu sebelum animasi jalan
+*/
+[style*="animation-delay"] {
+    opacity: 0; 
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Pastikan konten utama juga teranimasi */
+.content {
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+/* PROFILE ADMIN */
+.profile-admin{
+    width: 40px;
+    height: 40px;
+    background: #ffc107;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #000;
+}
+
+/* HOVER CARD */
+.card{
+    transition: 0.3s;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* SIDEBAR ANIMATION */
+.nav-link{
+    border-radius: 10px;
+}
+
+.nav-link:hover{
+    background: rgba(255,255,255,0.1);
+    transform: translateX(5px);
+}
+
+/* ICON ANIMATION */
+.icon-box{
+    transition: 0.3s;
+}
+
+.card:hover .icon-box{
+    transform: rotate(10deg) scale(1.1);
+}
+
+/* TABLE ANIMATION */
+.table tbody tr{
+    transition: 0.3s;
+}
+
+.table tbody tr:hover{
+    background: #f8f9fa;
+    transform: scale(1.01);
+}
+
+/* BUTTON EFFECT */
+.btn{
+    transition: 0.3s;
+}
+
+.btn:hover{
+    transform: translateY(-2px);
+}
+
+/* GLASS EFFECT */
+.card{
+    backdrop-filter: blur(10px);
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar{
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #002855;
+    border-radius: 20px;
+}
+
+/* ANIMASI MASUK */
+@keyframes fadeZoom {
+    from{
+        opacity:0;
+        transform:scale(0.9) translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:scale(1) translateY(0);
+    }
+}
+
+.card, .table, h3, h5{
+    animation: fadeZoom 0.7s ease;
+}
